@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* reveal a meme when hovered over a button */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        html {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+
+            background-color: rgb(110, 187, 187);
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+
+        }
+
+        .box {
+            border: hidden;
+            user-select: none;
+            border-radius: 25px;
+
+
+            padding: 15px;
+            background-color: rgb(54, 48, 48);
+
+        }
+
+        .display {
+            min-height: 200px;
+            border-radius: 15px;
+            background-color: rgb(69, 71, 73);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        p {
+            font-size: xx-large;
+            color: white;
+        }
+
+        #expression {
+            color: whitesmoke;
+            font-size: x-large;
+        }
+
+
+
+        .bttns {
+            margin-top: 3vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        button {
+            min-height: 60px;
+            min-width: 65px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(107, 189, 192);
+            font-size: x-large;
+            font-weight: bold;
+        }
+        button:hover{
+            opacity: 0.9;
+        }
+        button:active{
+            opacity: 0.8;
+            transform: scale(0.9);
+        }
+
+        .oprt {
+            background-color: rgb(233, 76, 76);
+        }
+
+        #result {
+            background-color: goldenrod;
+        }
+
+        #back {
+            background-color: burlywood;
+        }
+
+        #clear {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="display">
+            <p id="expression">Expression</p>
+            <p id="ans">Result</p>
+        </div>
+        <div class="numpad">
+
+            <div class="bttns">
+                <!-- top row -->
+
+                <button id="clear">C</button>
+                <button id="back">⌫</button>
+                <button id="btnSqr" class="oprt">^2</button>
+                <button id="btnPrcnt" class="oprt">%</button>
+
+                <button id="btn7">7</button>
+                <button id="btn8">8</button>
+                <button id="btn9">9</button>
+                <button id="btnDvd" class="oprt">÷</button>
+
+                <button id="btn4">4</button>
+                <button id="btn5">5</button>
+                <button id="btn6">6</button>
+                <button id="btnMult" class="oprt">x</button>
+
+                <button value="1" id="btn1">1</button>
+                <button id="btn2">2</button>
+                <button id="btn3">3</button>
+                <button id="btnMinus" class="oprt">-</button>
+
+                <button id="btn0">0</button>
+                <button id="btnDot">.</button>
+                <button id="result">=</button>
+                <button id="btnAdd" class="oprt">+</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
