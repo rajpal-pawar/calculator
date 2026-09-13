@@ -1,0 +1,94 @@
+ 
+    <style>
+        /* reveal a meme when hovered over a button */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(110, 187, 187);
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .box {
+            border: hidden;
+            user-select: none;
+            border-radius: 25px;
+             padding: 15px;
+            background-color: rgb(54, 48, 48);
+            box-shadow: 8px 9px 3px black;
+        }
+
+        .display {
+            height: 200px;
+            border-radius: 15px;
+            background-color: rgb(69, 71, 73);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        p {
+            font-size: xx-large;
+            color: white;
+        }
+
+        #expression {
+            color: whitesmoke;
+            font-size: x-large;
+        }
+
+        .bttns {
+            margin-top: 3vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        button {
+            min-height: 60px;
+            min-width: 65px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(107, 189, 192);
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        button:hover{
+            opacity: 0.9;
+        }
+
+        button:active{
+            opacity: 0.8;
+            transform: scale(0.9);
+        }
+
+        .oprt {
+            background-color: rgb(233, 76, 76);
+        }
+
+        #result {
+            background-color: goldenrod;
+        }
+
+        .back {
+            background-color: burlywood;
+        }
+
+        .clear {
+            background-color: burlywood;
+        }
+
+    </style>
