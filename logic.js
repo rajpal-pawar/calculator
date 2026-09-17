@@ -28,11 +28,10 @@ function addNum (num){
     fitText()
 }
 function oprtr(op){
-     if (currentVal === '') return; 
-    
+    if (currentVal === '') return; 
     const lastChar = currentVal.slice(-1);
-    const isOperator = /[+\-*/]/.test(lastChar);
-    
+
+    const isOperator = /[+\-*/]/.test(lastChar); 
     if (isOperator) {
         currentVal = currentVal.slice(0, -1) + op; 
        
@@ -58,6 +57,13 @@ function updateDisplay(){
 }
 
 function show(){
+    const lastChar = currentVal.slice(-1);
+
+    const isOperator = /[+\-*/]/.test(lastChar); 
+    if (isOperator) {
+        currentVal = currentVal.slice(0, -1); 
+       
+    }
     expression.textContent = currentVal;
     result = new Function (`return ${currentVal}`)();
     ans.textContent  = result; 
