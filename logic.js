@@ -31,7 +31,7 @@ function oprtr(op){
      if (currentVal === '') return; 
     
     const lastChar = currentVal.slice(-1);
-    const isOperator = /[+\-*/%]/.test(lastChar);
+    const isOperator = /[+\-*/]/.test(lastChar);
     
     if (isOperator) {
         currentVal = currentVal.slice(0, -1) + op; 
@@ -46,8 +46,10 @@ function oprtr(op){
 }
 function square(){
     expression.textContent = currentVal +'^2';
-    currentVal*=currentVal;
-    ans.textContent =currentVal ;
+    sqr = currentVal*currentVal;
+    currentVal = ''
+    currentVal += sqr
+    ans.textContent = sqr;
 
    
 }
@@ -60,6 +62,7 @@ function show(){
     result = new Function (`return ${currentVal}`)();
     ans.textContent  = result; 
     currentVal = '';
+    fitText();
 }
 function bckspc(){
     currentVal = currentVal.slice(0, -1);
@@ -73,9 +76,9 @@ function clearr(){
 }
 function fitText() {
     const len = ans.textContent.length;
-    if (len > 23) ans.style.fontSize = '1.2rem';
+    if (len > 30) ans.style.fontSize = '1rem';
+     else if (len > 23) ans.style.fontSize = '1.2rem';
     else if (len > 17) ans.style.fontSize = '1.5rem';
     
     else ans.style.fontSize = ''; // back to default xx-large
 }
-fitText()
