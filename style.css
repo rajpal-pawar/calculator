@@ -20,6 +20,7 @@
         }
 
         .box {
+            width: 330px;
             border: hidden;
             user-select: none;
             border-radius: 25px;
@@ -30,6 +31,7 @@
 
         .display {
             height: 200px;
+            width: 100%;
             border-radius: 15px;
             background-color: rgb(69, 71, 73);
             display: flex;
@@ -39,9 +41,11 @@
             padding: 15px;
         }
 
-        p {
+        #ans, #expression {
             font-size: xx-large;
             color: white;
+            overflow-x: hidden;
+            text-overflow: clip;
         }
 
         #expression {

@@ -5,10 +5,27 @@ let result = 0;
 let ans = document.getElementById("ans");
 let expression = document.getElementById("expression");
 
+window.addEventListener("keydown", function(pressed){
+    let chars = /[+\-*/%]/.test(pressed.key)
+    if(chars) {
+        oprtr(pressed.key)
+    }
+   else if (!isNaN(pressed.key) || pressed.key === '.') {
+        addNum(pressed.key);
+    } else if (pressed.key === 'Enter') {
+        show();
+    } else if (pressed.key === 'Backspace') {
+        bckspc();
+    } else if (pressed.key === 'Escape') {
+        clearr();
+    }
+})
+
 function addNum (num){
     currentVal+=num;  
     
     updateDisplay();
+    fitText()
 }
 function oprtr(op){
      if (currentVal === '') return; 
@@ -47,9 +64,18 @@ function show(){
 function bckspc(){
     currentVal = currentVal.slice(0, -1);
     ans.textContent = currentVal;
+    
 }
 function clearr(){
     ans.textContent  = '';
     expression.textContent = '';
     currentVal='';
 }
+function fitText() {
+    const len = ans.textContent.length;
+    if (len > 23) ans.style.fontSize = '1.2rem';
+    else if (len > 17) ans.style.fontSize = '1.5rem';
+    
+    else ans.style.fontSize = ''; // back to default xx-large
+}
+fitText()
