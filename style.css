@@ -95,3 +95,10 @@
             background-color: burlywood;
         }
 
+        i{
+            font-size: x-large;
+        }
+        .fa-square-github{
+            font-size: xxx-large;
+            color: black;
+        }
