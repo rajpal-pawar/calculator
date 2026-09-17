@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calci</title>
-   <link rel="stylesheet" href="style.css">
-   <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="calculator-favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="calculator-favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="calculator-favicon.svg">
 </head>
 
 <body>
@@ -24,13 +26,14 @@
 
                 <button onclick="clearr()" class="clear">C</button>
                 <button class="back" onclick="bckspc()">⌫</button>
-                <button onclick="square()"  class="oprt">^2</button>
-                <button onclick="oprtr('%')"  class="oprt"><a href="https://github.com/rajpal-pawar"><i class="fa-brands fa-square-github"></i></a></button>
+                <button onclick="square()" class="oprt">^2</button>
+                <button class="oprt"><a href="https://github.com/rajpal-pawar"><i
+                            class="fa-brands fa-square-github"></i></a></button>
 
                 <button onclick="addNum('7')">7</button>
                 <button onclick="addNum('8')">8</button>
                 <button onclick="addNum('9')">9</button>
-                <button onclick="oprtr('/')"  class="oprt">÷</button>
+                <button onclick="oprtr('/')" class="oprt">÷</button>
 
                 <button onclick="addNum('4')">4</button>
                 <button onclick="addNum('5')">5</button>
@@ -44,14 +47,13 @@
 
                 <button onclick="addNum('0')">0</button>
                 <button onclick="addNum('.')">.</button>
-                <button  onclick="show()">=</button>
+                <button onclick="show()">=</button>
                 <button onclick="oprtr('+')" class="oprt">+</button>
             </div>
 
         </div>
     </div>
-   
-    
+    <script src="logic.js"></script>
 </body>
 
 </html>
